@@ -34,9 +34,17 @@ Command: npx @threlte/gltf@2.0.3 static/Desk.glb
 
   // after the component is mounted, we can access the mesh
   // and set the texture uniform
+  gltf.subscribe((gltf) => {
+    if (gltf) {
+      setTimeout(() => {
+        //position.set(0.0);
+        laptop.set(-0.5);
+        lamp.set(-0.9);
+        chair.set(0.7);
+      }, 500);
+    }
+  });
   $: if (snagg) {
-    position.set(-0.0);
-
     const map = snagg.material.emissiveMap;
     floorMaterial = new ShaderMaterial({
       uniforms: {
@@ -122,12 +130,6 @@ Command: npx @threlte/gltf@2.0.3 static/Desk.glb
   const plant = spring(0.5 * (1 + Math.sin(performance.now() * 0.001)), {
     stiffness: 0.07,
     damping: 0.1,
-  });
-
-  onMount(() => {
-    laptop.set(0.2);
-    lamp.set(-0.5);
-    chair.set(0.5);
   });
 
   let position = tweened(-1.3, {
