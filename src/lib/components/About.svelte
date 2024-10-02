@@ -18,11 +18,12 @@
     </h2>
     <p>
       <semitransparent>
-        I'm Konrad Hapke, a software developer from Germany. I'm currently
-        studying computer science at the University of Applied Sciences in
-        Kaiserslautern. I'm passionate about web development and I love to
-        create interactive and visually appealing websites. I'm always eager to
-        learn new things and I'm constantly working on improving my skills.
+        I crafting interfaces that not only perform but leave a lasting
+        impression. With a deep fluency in a wide range of programming languages
+        and a flair for 3D artistry, my projects span from sleek, interactive
+        designs to immersive visual worlds. My journey through over 160 Blender
+        renders is a testament to my passion for transforming pixels into
+        stories. Let’s bring your vision to life, one line of code at a time.
       </semitransparent>
     </p>
 
