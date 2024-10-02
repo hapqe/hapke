@@ -1,4 +1,40 @@
+:root {
+  --background-color: #e68e8e;
+}
+
 body {
-  background-color: #e68e8e;
+  background-color: var(--background-color);
   overflow-x: hidden;
+  font-family: "Montserrat", sans-serif;
+  transition: background-color 0.5s;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  overflow-wrap: break-word;
+
+  /*color: white;*/
+}
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 1.7rem;
+  }
+}
+
+bgblack {
+  background-color: black;
+  color: white;
+}
+
+semitransparent {
+  opacity: 0.5;
+}
+
+
+.semitransparent {
+  opacity: 0.5;
 }

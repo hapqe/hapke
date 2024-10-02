@@ -1,6 +1,13 @@
+<script context="module">
+  import { writable } from "svelte/store";
+  export const scrollState = writable(0);
+</script>
+
 <script>
   import { Canvas } from "@threlte/core";
   import Scene from "./Scene.svelte";
+  import Header from "./Header.svelte";
+  import About from "./About.svelte";
 </script>
 
 <div id="canvas-frame">
@@ -8,8 +15,10 @@
     <Scene />
   </Canvas>
 </div>
+
 <div id="content">
-  <h1>Konrad Hapke</h1>
+  <Header />
+  <About />
 </div>
 
 <style>
@@ -17,17 +26,13 @@
     position: fixed;
     height: 100svh;
     width: 100svw;
-  }
-  h1 {
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
-
-    color: white;
+    pointer-events: auto;
+    z-index: 0;
   }
   #content {
-    width: 100%;
-    margin-left: 2rem;
+    text-align: center;
+    position: relative;
+
+    pointer-events: none;
   }
 </style>

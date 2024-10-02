@@ -1,13 +1,8 @@
 <script>
-  import { T, useFrame } from "@threlte/core";
+  import { T } from "@threlte/core";
   import Desk from "./Desk.svelte";
-
-  let rotation = 0;
-  useFrame(() => {
-    rotation += 0.001;
-  });
 </script>
 
-<T.Group rotation.y={rotation}>
+<T.Group scale={0.1}>
   <Desk />
 </T.Group>
