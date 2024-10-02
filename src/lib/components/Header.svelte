@@ -6,7 +6,7 @@
 <h1
   use:inview
   on:inview_enter={(event) => {
-    scrollState.set(0);
+    if ($scrollState !== 0) scrollState.set(0);
   }}
   class="header"
 >
