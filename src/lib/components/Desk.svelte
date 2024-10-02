@@ -37,11 +37,11 @@ Command: npx @threlte/gltf@2.0.3 static/Desk.glb
   gltf.subscribe((gltf) => {
     if (gltf) {
       setTimeout(() => {
-        //position.set(0.0);
+        position.set(0.0);
         laptop.set(-0.5);
         lamp.set(-0.9);
         chair.set(0.7);
-      }, 500);
+      }, 10);
     }
   });
   $: if (snagg) {
@@ -141,7 +141,7 @@ Command: npx @threlte/gltf@2.0.3 static/Desk.glb
     if (state != 0) {
       position.set(1.3);
     } else {
-      position.set(0);
+      if ($gltf) position.set(0);
     }
   });
 </script>
