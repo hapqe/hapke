@@ -8,6 +8,7 @@
   id="about"
   use:inview
   on:inview_enter={(event) => {
+    console.log("hello");
     scrollState.set(1);
   }}
 >

@@ -1,6 +1,8 @@
 <script context="module">
   import { writable } from "svelte/store";
-  export const scrollState = writable(0);
+  import { Cursor } from "curseur";
+
+  export const scrollState = writable(undefined);
 </script>
 
 <script>
