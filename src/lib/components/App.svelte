@@ -3,6 +3,10 @@
 
     /** @type {import('svelte/store').Writable<number | undefined>} */
     export const scrollState = writable(undefined);
+
+    /** @type {import('svelte/store').Writable<{x: number, y: number}>} */
+    export const mouseState = writable({x: .5, y: .5});
+
 </script>
 
 <script>
@@ -10,6 +14,9 @@
     import Scene from "./Scene.svelte";
     import Header from "./Header.svelte";
     import About from "./About.svelte";
+    import Projects from "$lib/components/Projects.svelte";
+
+
 </script>
 
 <div id="canvas-frame">
@@ -21,6 +28,7 @@
 <div id="content">
     <Header/>
     <About/>
+    <Projects/>
 </div>
 
 <style>
