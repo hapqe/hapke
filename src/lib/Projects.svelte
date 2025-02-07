@@ -12,13 +12,14 @@
   }}
 >
   <h2>Projects</h2>
+  <h3 style="opacity: .6;">This site is work in progress!</h3>
 
-  <div id="wrapper">
-    <Project src="ferris.jpg" width="200px">Dystopic Ferris Wheel</Project>
-    <Project src="ferris.jpg" width="200px">Dystopic Ferris Wheel</Project>
-    <Project src="ferris.jpg" width="200px">Dystopic Ferris Wheel</Project>
-    <Project src="ferris.jpg" width="200px">Dystopic Ferris Wheel</Project>
-  </div>
+  <!-- <div id="wrapper"> -->
+  <!--   <Project src="ferris.jpg" width="200px">Dystopic Ferris Wheel</Project> -->
+  <!--   <Project src="ferris.jpg" width="200px">Dystopic Ferris Wheel</Project> -->
+  <!--   <Project src="ferris.jpg" width="200px">Dystopic Ferris Wheel</Project> -->
+  <!--   <Project src="ferris.jpg" width="200px">Dystopic Ferris Wheel</Project> -->
+  <!-- </div> -->
 </div>
 
 <style>
@@ -43,4 +44,3 @@
     padding: 3rem;
   }
 </style>
-

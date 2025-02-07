@@ -14,6 +14,7 @@
   import Header from "./lib/Header.svelte";
   import About from "./lib/About.svelte";
   import Projects from "./lib/Projects.svelte";
+  import Contact from "./lib/Contact.svelte";
 </script>
 
 <div id="canvas-frame">
@@ -26,6 +27,7 @@
   <Header />
   <About />
   <Projects />
+  <Contact />
 </div>
 
 <style>

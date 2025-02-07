@@ -4,15 +4,14 @@
   import { scrollState } from "../App.svelte";
 </script>
 
-<div
-  id="about"
-  use:inview
-  on:inview_enter={() => {
-    scrollState.set(1);
-  }}
->
+<div id="about">
   <div id="right">
-    <h2>
+    <h2
+      use:inview
+      on:inview_enter={() => {
+        scrollState.set(1);
+      }}
+    >
       About Me <br />
     </h2>
     <p>
@@ -30,7 +29,7 @@
       <Cv />
       <p>
         <semitransparent> or download the</semitransparent>
-        <a href="">german version</a>
+        <a target="_blank" href="Konrad_Hapke_CV.pdf">german version</a>
       </p>
     </div>
   </div>
