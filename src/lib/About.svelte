@@ -16,12 +16,10 @@
     </h2>
     <p>
       <semitransparent>
-        I crafting interfaces that not only perform but leave a lasting
-        impression. With a deep fluency in a wide range of programming languages
-        and a flair for 3D artistry, my projects span from sleek, interactive
-        designs to immersive visual worlds. My journey through over 160 Blender
-        renders is a testament to my passion for transforming pixels into
-        stories. Let’s bring your vision to life, one line of code at a time.
+        I’m a hobby programmer, web developer, and 3D artist who loves bringing
+        creative ideas to life. I went to a game dev school, which got me hooked
+        on coding and making cool stuff. Now I’m studying informatics and always
+        looking for new things to learn and build.
       </semitransparent>
     </p>
 

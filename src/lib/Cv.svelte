@@ -40,7 +40,29 @@
     gap: 0.5rem;
 
     transition: 0.3s;
+    svg  {
+      transition: 300ms;
+    }
   }
+
+  @keyframes moveUpAndAppear {
+    0% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-200%);
+    }
+
+    51% {
+      transform: translateY(200%);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+
   button img {
     fill: var(--background-color);
   }
@@ -49,5 +71,8 @@
   button:hover {
     opacity: 1;
     scale: 1.1;
+    svg {
+      animation: moveUpAndAppear 200ms ease-in-out reverse;
+    }
   }
 </style>

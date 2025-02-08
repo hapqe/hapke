@@ -3,9 +3,12 @@
 
   /** @type {import('svelte/store').Writable<number | undefined>} */
   export const scrollState = writable(undefined);
+  export const disableButton = writable(false);
+  export const enable3d = writable(true);
 
   /** @type {import('svelte/store').Writable<{x: number, y: number}>} */
   export const mouseState = writable({ x: 0.5, y: 0.5 });
+  export const scrollFactor = new Tween(0);
 </script>
 
 <script>
@@ -15,13 +18,25 @@
   import About from "./lib/About.svelte";
   import Projects from "./lib/Projects.svelte";
   import Contact from "./lib/Contact.svelte";
+  import { fade } from "svelte/transition";
+  import { Tween } from "svelte/motion";
+
+  window.addEventListener("load", () => {
+    $disableButton = window.scrollY < 10;
+  });
+
+  scrollState.subscribe((s) => {
+    scrollFactor.set(s === 0 ? 1 : 0);
+  });
 </script>
 
-<div id="canvas-frame">
-  <Canvas>
-    <Scene />
-  </Canvas>
-</div>
+{#if $enable3d}
+  <div transition:fade id="canvas-frame">
+    <Canvas>
+      <Scene />
+    </Canvas>
+  </div>
+{/if}
 
 <div id="content">
   <Header />

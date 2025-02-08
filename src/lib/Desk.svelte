@@ -70,7 +70,7 @@
   import { writable } from "svelte/store";
   import { spring, tweened } from "svelte/motion";
   import { cubicInOut } from "svelte/easing";
-  import { scrollState } from "../App.svelte";
+  import { scrollFactor, scrollState } from "../App.svelte";
   import { log } from "three/src/nodes/TSL.js";
 
   const mousePos = {
@@ -314,8 +314,8 @@
         rotation={[-0.64, 1.06, 0.58]}
         oncreate={(ref) => {
           dampenedMousePos.subscribe(({ x, y }) => {
-            ref.position.z = 0.5 * (x - 0.5);
-            ref.position.y = 1.0 - 0.5 * (0.5 - y);
+            ref.position.z = 0.5 * scrollFactor.current * (x - 0.5);
+            ref.position.y = 1.0 - 0.5 * scrollFactor.current * (0.5 - y);
             ref.position.x = window.innerWidth < 500 ? 4 : 1.55;
             ref.lookAt(0, 0, 0);
           });
