@@ -1,4 +1,4 @@
-<a target="_blank" href="Konrad_Hapke_CV_de.pdf">
+<a target="_blank" href="cv/Konrad_Hapke_CV_de.pdf">
   <button class="semitransparent"
     >Download CV
     <svg

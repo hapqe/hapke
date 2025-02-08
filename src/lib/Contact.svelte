@@ -1,12 +1,14 @@
 <main>
   <h3>Konrad Fabian Hapke</h3>
   <div>
-    <a href="mailto:hello@hapke.me"><img src="mail.svg" alt="email icon" /></a>
+    <a href="mailto:hello@hapke.me"
+      ><img src="icons/mail.svg" alt="email icon" /></a
+    >
     <a target="_blank" href="https://github.com/hapqe"
-      ><img src="github.svg" alt="github icon" /></a
+      ><img src="icons/github.svg" alt="github icon" /></a
     >
     <a target="_blank" href="https://instagram.com/kooler_konny"
-      ><img src="insta.svg" alt="intagram icon" /></a
+      ><img src="icons/insta.svg" alt="intagram icon" /></a
     >
   </div>
 </main>

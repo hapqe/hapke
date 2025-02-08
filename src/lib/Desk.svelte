@@ -310,8 +310,6 @@
         far={1000}
         near={0.1}
         fov={22.9}
-        position={[1.55, 0.54, 0.7]}
-        rotation={[-0.64, 1.06, 0.58]}
         oncreate={(ref) => {
           dampenedMousePos.subscribe(({ x, y }) => {
             ref.position.z = 0.5 * scrollFactor.current * (x - 0.5);

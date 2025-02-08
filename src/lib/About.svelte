@@ -27,7 +27,7 @@
       <Cv />
       <p>
         <semitransparent> or download the</semitransparent>
-        <a target="_blank" href="Konrad_Hapke_CV.pdf">german version</a>
+        <a target="_blank" href="cv/Konrad_Hapke_CV.pdf">german version</a>
       </p>
     </div>
   </div>

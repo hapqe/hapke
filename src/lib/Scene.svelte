@@ -2,7 +2,6 @@
   import { T } from "@threlte/core";
   import Desk from "./Desk.svelte";
   import { disableButton, mouseState } from "../App.svelte";
-  import Robot from "./Robot.svelte";
 
   window.addEventListener("pointermove", (e) => {
     let x = e.clientX;
@@ -19,5 +18,4 @@
 
 <T.Group scale={0.1}>
   <Desk />
-  <Robot />
 </T.Group>
