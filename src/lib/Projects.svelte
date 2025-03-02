@@ -2,17 +2,12 @@
   import Project from "./Project.svelte";
   import { inview } from "svelte-inview";
   import { scrollState } from "../App.svelte";
-
-  let images3d = Array.from({ length: 19 }, (_, i) => `${i}_t.jpg`);
+  import projects from "../assets/projects.json";
 
   // Create an array with styles for each image: "big" (2x size), "wide" (2x width), or null (default size)
   // for later swap_images() { mv "$1.jpg" tmp1.jpg && mv "$1_t.jpg" tmp1_t.jpg && mv "$2.jpg" "$1.jpg" && mv "$2_t.jpg" "$1_t.jpg" && mv tmp1.jpg "$2.jpg" && mv tmp1_t.jpg "$2_t.jpg"; }
-  let imageStyles3d = Array.from({ length: 19 }, () => null);
-  imageStyles3d[4] = "big";
-  imageStyles3d[7] = "wide";
-  imageStyles3d[12] = "big";
 
-  let imagesProgramming = Array.from({ length: 2 }, (_, i) => `${i}_t.jpg`);
+  let imagesProgramming = Array.from({ length: 1 }, (_, i) => `${i}_t.jpg`);
 </script>
 
 <div
@@ -26,9 +21,12 @@
   <h3>3d Renders</h3>
 
   <div class="grid-container">
-    {#each images3d as image, i}
-      <div class="grid-item {imageStyles3d[i]}">
-        <img src={`/projects/3d/${image}`} alt={`3d render ${image}`} />
+    {#each projects["3d"] as project, i}
+      <div class="grid-item {project['style']}">
+        <img
+          src={`/projects/3d/${i + (!(project["type"] === "video") && project["style"] === "big" ? "" : "_t") + ".jpg"}`}
+          alt={`3d render ${i}`}
+        />
       </div>
     {/each}
   </div>

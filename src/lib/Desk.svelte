@@ -2,9 +2,14 @@
   import { Group } from "three";
   import { useTask, T } from "@threlte/core";
   import { useGltf } from "@threlte/extras";
-  import { ShaderMaterial } from "three";
+  import {
+    ShaderMaterial,
+    TextureLoader,
+    MeshStandardMaterial,
+    Color,
+  } from "three";
 
-  import { interactivity } from "@threlte/extras";
+  import { interactivity, useDraco } from "@threlte/extras";
 
   interactivity();
 
@@ -21,18 +26,20 @@
 
   export const ref = new Group();
 
-  const gltf = useGltf("Desk.glb");
+  const dracoLoader = useDraco();
+  const gltf = useGltf("Scene.glb", { dracoLoader });
+  let deskMap = undefined;
 
   /** @type {ShaderMaterial | undefined} */
   let floorMaterial = undefined;
 
   /** @type {import('three').Texture | undefined} */
-  let deskMap = undefined;
 
   // after the component is mounted, we can access the mesh
   // and set the texture uniform
   gltf.subscribe((gltf) => {
     if (gltf) {
+      console.log(gltf);
       setTimeout(() => {
         if ($scrollState === 0) position.set(0);
         laptop.set(-0.5);
@@ -41,17 +48,17 @@
       }, 10);
     }
   });
+
   $: if (deskMap) {
     floorMaterial = new ShaderMaterial({
       uniforms: {
         uTexture: { type: "t", value: deskMap },
       },
       vertexShader: `
-      attribute vec2 uv1;
       varying vec2 vUv;
 
       void main() {
-        vUv = uv1;
+        vUv = uv;
         gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
       }
     `,
@@ -71,7 +78,6 @@
   import { spring, tweened } from "svelte/motion";
   import { cubicInOut } from "svelte/easing";
   import { scrollFactor, scrollState } from "../App.svelte";
-  import { log } from "three/src/nodes/TSL.js";
 
   const mousePos = {
     x: 0.5,
@@ -294,16 +300,13 @@
           />
         </T.Group>
         <T.Mesh
+          geometry={gltf.nodes.Table.geometry}
           oncreate={(ref) => {
             deskMap = ref.material.emissiveMap;
           }}
-          geometry={gltf.nodes.Plane_003002.geometry}
           material={gltf.materials.Material}
         />
-        <T.Mesh
-          geometry={gltf.nodes.Plane_003002_1.geometry}
-          material={floorMaterial}
-        />
+        <T.Mesh geometry={gltf.nodes.Floor.geometry} material={floorMaterial} />
       </T.Group>
       <T.PerspectiveCamera
         makeDefault={true}
