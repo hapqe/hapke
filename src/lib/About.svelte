@@ -2,6 +2,7 @@
   import { inview } from "svelte-inview";
   import Cv from "./Cv.svelte";
   import { scrollState } from "../App.svelte";
+  // import { Image } from "svelte-responsive-images";
 </script>
 
 <div id="about">

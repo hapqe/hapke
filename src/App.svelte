@@ -41,7 +41,7 @@
 <div id="content">
   <Header />
   <About />
-  <Projects />
+  <!-- <Projects /> -->
   <Contact />
 </div>
 
