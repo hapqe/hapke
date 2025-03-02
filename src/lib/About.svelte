@@ -33,7 +33,7 @@
     </div>
   </div>
 
-  <img src="me.jpg" alt="Konrad Hapke" />
+  <img src="me.webp" alt="Konrad Hapke" />
 </div>
 
 <style>
