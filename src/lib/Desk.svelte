@@ -2,12 +2,7 @@
   import { Group } from "three";
   import { useTask, T } from "@threlte/core";
   import { useGltf } from "@threlte/extras";
-  import {
-    ShaderMaterial,
-    TextureLoader,
-    MeshStandardMaterial,
-    Color,
-  } from "three";
+  import { ShaderMaterial, TextureLoader, Color } from "three";
 
   import { interactivity, useDraco } from "@threlte/extras";
 
@@ -37,15 +32,30 @@
 
   // after the component is mounted, we can access the mesh
   // and set the texture uniform
-  gltf.subscribe((gltf) => {
+  gltf.subscribe(async (gltf) => {
     if (gltf) {
-      console.log(gltf);
       setTimeout(() => {
         if ($scrollState === 0) position.set(0);
         laptop.set(-0.5);
         lamp.set(-0.9);
         chair.set(0.7);
       }, 10);
+
+      const textureLoader = new TextureLoader();
+      textureLoader.load("deskHighRes.webp", (highRes) => {
+        console.log(gltf.materials.Material.emissiveMap.clone());
+
+        /** @type {import('three').Material} */
+        const map = gltf.materials.Material.emissiveMap;
+
+        console.log(highRes);
+        highRes.flipY = false;
+        highRes.colorSpace = "srgb";
+
+        gltf.materials.Material.emissiveMap = highRes;
+        deskMap = highRes;
+        gltf.materials.Material.needsUpdate = true;
+      });
     }
   });
 
