@@ -12,6 +12,7 @@
     "@sveltejs/vite-plugin-svelte": "^5.0.3",
     "@threlte/core": "^8.0.1",
     "@threlte/extras": "^9.0.1",
+    "sharp": "^0.33.5",
     "svelte": "^5.15.0",
     "svelte-inview": "^4.0.4",
     "vite": "^6.0.5"

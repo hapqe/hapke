@@ -2,7 +2,7 @@
   import { inview } from "svelte-inview";
   import Cv from "./Cv.svelte";
   import { scrollState } from "../App.svelte";
-  // import { Image } from "svelte-responsive-images";
+  import Image from "./Image.svelte";
 </script>
 
 <div id="about">
@@ -33,7 +33,7 @@
     </div>
   </div>
 
-  <img src="me.webp" alt="Konrad Hapke" />
+  <Image c="me-img" src="me.jpg" alt="Konrad Hapke" />
 </div>
 
 <style>
@@ -47,29 +47,6 @@
 
   a:hover {
     opacity: 1;
-  }
-
-  img {
-    z-index: 10;
-    width: 350px;
-  }
-
-  @media (max-width: 400px) {
-    img {
-      display: none;
-    }
-
-    #right {
-      width: 100% !important;
-    }
-
-    #about {
-      margin: 1rem;
-    }
-
-    p {
-      margin-bottom: 3rem;
-    }
   }
 
   #about {

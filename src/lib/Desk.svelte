@@ -43,12 +43,9 @@
 
       const textureLoader = new TextureLoader();
       textureLoader.load("deskHighRes.webp", (highRes) => {
-        console.log(gltf.materials.Material.emissiveMap.clone());
-
         /** @type {import('three').Material} */
         const map = gltf.materials.Material.emissiveMap;
 
-        console.log(highRes);
         highRes.flipY = false;
         highRes.colorSpace = "srgb";
 
