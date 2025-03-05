@@ -34,7 +34,10 @@
 </script>
 
 <div class:loaded>
-  <div style="overflow: hidden;" bind:offsetWidth={containerWidth}>
+  <div
+    style="overflow: hidden; background: red;"
+    bind:offsetWidth={containerWidth}
+  >
     <picture>
       <source
         type="image/webp"
@@ -44,7 +47,7 @@
         use:load
         class="main {c}"
         {alt}
-        src="{optimizedFolder}/{src}-25.webp"
+        src="{optimizedFolder}/{src}-10.webp"
         loading="lazy"
       />
     </picture>
@@ -52,6 +55,9 @@
 </div>
 
 <style>
+  div {
+    height: 100%;
+  }
   img {
     will-change: opacity;
   }

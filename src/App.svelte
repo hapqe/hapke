@@ -21,6 +21,8 @@
   import { fade } from "svelte/transition";
   import { Tween } from "svelte/motion";
 
+  import projects from "./assets/projects.json";
+
   window.addEventListener("load", () => {
     $disableButton = window.scrollY < 10;
   });
@@ -41,11 +43,20 @@
 <div id="content">
   <Header />
   <About />
-  <!-- <Projects /> -->
+  <div id="projects">
+    <h2>Projects</h2>
+    {#each projects as kind}
+      <Projects {kind} />
+    {/each}
+  </div>
   <Contact />
 </div>
 
 <style>
+  #projects {
+    pointer-events: auto;
+    margin-top: 50vh;
+  }
   #canvas-frame {
     position: fixed;
     height: 100svh;

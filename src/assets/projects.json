@@ -1,69 +1,84 @@
-{
-  "3d": [
-    {
-      "title": "snagg"
-    },
-    {
-      "title": "snagg"
-    },
-    {
-      "title": "snagg"
-    },
-    {
-      "title": "snagg",
-      "type": "video"
-    },
-    {
-      "title": "snagg",
-      "type": "video",
-      "style": "big"
-    },
-    {
-      "title": "snagg",
-      "type": "video"
-    },
-    {
-      "title": "snagg",
-      "style": "big"
-    },
-    {
-      "title": "snagg",
-      "style": "wide"
-    },
-    {
-      "title": "snagg"
-    },
-    {
-      "title": "snagg"
-    },
-    {
-      "title": "snagg"
-    },
-    {
-      "title": "snagg",
-      "style": "big"
-    },
-    {
-      "title": "snagg"
-    },
-    {
-      "title": "snagg"
-    },
-    {
-      "title": "snagg"
-    },
-    {
-      "title": "snagg"
-    },
-    {
-      "title": "snagg"
-    },
-    {
-      "title": "snagg"
-    },
-    {
-      "title": "snagg"
-    }
-  ],
-  "programming": []
-}
+[
+  {
+    "header": "3d Projects",
+    "folder": "3d",
+    "projects": [
+      {
+        "title": "Future sunset",
+        "desc": "My 147th daily render. Made with Blender."
+      },
+      {
+        "title": "Walking Mug",
+        "desc": "My 3rd daily render. Made with Blender."
+      },
+      {
+        "title": "Undead eclipse",
+        "desc": "My 4th daily render. Made with Blender."
+      },
+      {
+        "title": "Abandoned Cityscapes"
+      },
+      {
+        "title": "vid1",
+        "type": "video",
+        "style": "big"
+      },
+      {
+        "title": "vid2",
+        "type": "video"
+      },
+      {
+        "style": "wide",
+        "title": "God vs. Demons"
+      },
+      {
+        "title": "Overgrown phone booth",
+        "style": "big"
+      },
+      {
+        "title": "Reaching for god"
+      },
+      {
+        "title": "vid3",
+        "type": "video"
+      },
+      {
+        "title": "Pink cruiser"
+      },
+      {
+        "title": "Japanese Temple",
+        "style": "big"
+      },
+      {
+        "title": "Spaceship accelerator"
+      },
+      {
+        "title": "Phone promotion?"
+      },
+      {
+        "title": "Very rusty"
+      },
+      {
+        "title": "Messing with a monster"
+      },
+      {
+        "title": "Overgrown"
+      },
+      {
+        "title": "Connections"
+      },
+      {
+        "title": "A punch for freedom"
+      }
+    ]
+  },
+  {
+    "header": "Programming",
+    "folder": "programming",
+    "projects": [
+      {
+        "title": "Sheetr"
+      }
+    ]
+  }
+]

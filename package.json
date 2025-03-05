@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vite build",
     "preview": "vite preview"
   },
@@ -12,6 +12,8 @@
     "@sveltejs/vite-plugin-svelte": "^5.0.3",
     "@threlte/core": "^8.0.1",
     "@threlte/extras": "^9.0.1",
+    "photoswipe": "^5.4.4",
+    "photoswipe-dynamic-caption-plugin": "^1.2.7",
     "sharp": "^0.33.5",
     "svelte": "^5.15.0",
     "svelte-inview": "^4.0.4",

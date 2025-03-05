@@ -2,6 +2,10 @@
   --background-color: #e68e8e;
 }
 
+html {
+  view-transition-name: none;
+}
+
 body {
   background-color: var(--background-color);
   overflow-x: hidden;
@@ -60,5 +64,40 @@ semitransparent {
 
   p {
     margin-bottom: 3rem;
+  }
+}
+
+
+.project-img {
+  width: 100%;
+  height: 100%;
+
+  transition: 0.3s ease;
+}
+
+@media (pointer:fine) {
+  .project-img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+top {
+  z-index: 1000;
+}
+
+.bi-chevron-left,
+.bi-chevron-right,
+.bi-x {
+  transform: scale(2)
+}
+
+.wide {
+  .project-img {
+    transform: scaleY(1.04) translateY(2%);
   }
 }
