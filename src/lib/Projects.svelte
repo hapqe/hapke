@@ -32,6 +32,14 @@
       closeSVG:
         '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-x"   viewBox="0 0 16 16">   <path     d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" /> </svg>',
       counter: false,
+      paddingFn: (viewportSize) => {
+        return {
+          top: 10,
+          bottom: 10,
+          left: 10,
+          right: 10,
+        };
+      },
       pswpModule: () => import("photoswipe"),
     });
 
@@ -43,6 +51,12 @@
 
     lightbox.init();
   });
+
+  const height = (style) =>
+    ({
+      wide: 2160,
+      programming: 1920,
+    })[style] || 1080;
 </script>
 
 <div
@@ -67,7 +81,7 @@
         data-pswp-video-src={project.type == "video"
           ? "projects/" + kind.folder + "/" + i + "_v.mp4"
           : ""}
-        data-pswp-width={project.style == "wide" ? 2160 : 1080}
+        data-pswp-width={height(project.style)}
         data-pswp-height={1080}
         class="grid-item {project['style']}"
         style="view-transition-name: image-{i};"
@@ -81,7 +95,7 @@
         <div class="title">
           <div class="desc-content">{project.title}</div>
         </div>
-        <span class="pswp-caption-content">{project.desc}</span>
+        <span class="pswp-caption-content"> {@html project.desc}</span>
         <div class="play">
           <img src={play} alt="Play video" />
         </div>
@@ -158,12 +172,19 @@
     aspect-ratio: 2.1;
   }
 
+  .grid-item.programming {
+    aspect-ratio: 16 / 9;
+  }
+
   @media (max-width: 768px) {
     .grid-item.big {
       aspect-ratio: 1;
       grid-column: span 1;
       grid-row: span 1;
       height: auto;
+    }
+    .grid-container {
+      grid-template-columns: unset;
     }
   }
 </style>

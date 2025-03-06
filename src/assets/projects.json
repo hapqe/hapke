@@ -20,17 +20,20 @@
         "desc": "My 40th daily render. Made with Blender"
       },
       {
-        "title": "vid1",
+        "title": "Mechanical wonders",
         "type": "video",
-        "style": "big"
+        "style": "big",
+        "desc": "My 17th daily render. Made with Blender"
       },
       {
         "title": "Making Suzanne",
-        "type": "video"
+        "type": "video",
+        "desc": "My 18th daily render. Made with Blender"
       },
       {
         "style": "wide",
-        "title": "God vs. Demons"
+        "title": "God vs. Demons",
+        "desc": "My 120th daily render. Made with Blender"
       },
       {
         "title": "Overgrown phone booth",
@@ -38,11 +41,13 @@
         "desc": "My 22nd daily render. Made with Blender."
       },
       {
-        "title": "Reaching for god"
+        "title": "Reaching for god",
+        "desc": "My 33rd daily render. Made with Blender"
       },
       {
         "title": "Bounce",
-        "type": "video"
+        "type": "video",
+        "desc": "My 14th daily render. Made with Blender"
       },
       {
         "title": "Pink cruiser",
@@ -50,28 +55,36 @@
       },
       {
         "title": "Japanese Temple",
-        "style": "big"
+        "style": "big",
+        "desc": "My 55th daily render. Made with Blender"
       },
       {
-        "title": "Spaceship accelerator"
+        "title": "Spaceship accelerator",
+        "desc": "My 68th daily render. Made with Blender"
       },
       {
-        "title": "Phone promotion?"
+        "title": "Phone promotion?",
+        "desc": "My 81th daily render. Made with Blender"
       },
       {
-        "title": "Very rusty"
+        "title": "Very rusty",
+        "desc": "My 85th daily render. Made with Blender"
       },
       {
-        "title": "Messing with a monster"
+        "title": "Messing with a monster",
+        "desc": "My 103th daily render. Made with Blender"
       },
       {
-        "title": "Overgrown"
+        "title": "Overgrown",
+        "desc": "My 115th daily render. Made with Blender"
       },
       {
-        "title": "Connections"
+        "title": "Connections",
+        "desc": "My 138th daily render. Made with Blender"
       },
       {
-        "title": "A punch for freedom"
+        "title": "A punch for freedom",
+        "desc": "My 28th daily render. Made with Blender"
       }
     ]
   },
@@ -80,7 +93,9 @@
     "folder": "programming",
     "projects": [
       {
-        "title": "Sheetr"
+        "title": "Sheetr, a spritesheet packer",
+        "style": "programming",
+        "desc": "<a target='_blank' href='https://hapqe.github.io/sheetr/'>Sheetr</a> is a small web app, aimed at creating sprite sheets from single images. You simply drag and drop them into Sheetr, and Sheetr will automatically create a sheet, as well as a .json file with informations about each group of frames. You could for example have 2 folders with individual frames for 2 animations, and sheetr will combine everything into one sheet, and return, where to look the frames for each animation up."
       }
     ]
   }
