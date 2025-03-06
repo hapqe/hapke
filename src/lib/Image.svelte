@@ -34,10 +34,7 @@
 </script>
 
 <div class:loaded>
-  <div
-    style="overflow: hidden; background: red;"
-    bind:offsetWidth={containerWidth}
-  >
+  <div style="overflow: hidden;" bind:offsetWidth={containerWidth}>
     <picture>
       <source
         type="image/webp"
