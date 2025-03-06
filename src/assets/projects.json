@@ -16,7 +16,8 @@
         "desc": "My 4th daily render. Made with Blender."
       },
       {
-        "title": "Abandoned Cityscapes"
+        "title": "Abandoned Cityscapes",
+        "desc": "My 40th daily render. Made with Blender"
       },
       {
         "title": "vid1",
@@ -24,7 +25,7 @@
         "style": "big"
       },
       {
-        "title": "vid2",
+        "title": "Making Suzanne",
         "type": "video"
       },
       {
@@ -33,17 +34,19 @@
       },
       {
         "title": "Overgrown phone booth",
-        "style": "big"
+        "style": "big",
+        "desc": "My 22nd daily render. Made with Blender."
       },
       {
         "title": "Reaching for god"
       },
       {
-        "title": "vid3",
+        "title": "Bounce",
         "type": "video"
       },
       {
-        "title": "Pink cruiser"
+        "title": "Pink cruiser",
+        "desc": "My 46th daily render, picturing a car I`ve modelled in Blender over the past day."
       },
       {
         "title": "Japanese Temple",

@@ -8,6 +8,7 @@
   import PhotoSwipeLightbox from "photoswipe/lightbox";
   import PhotoSwipeDynamicCaption from "photoswipe-dynamic-caption-plugin";
   import PhotoSwipeVideoPlugin from "../../lib/photoswipe-video-plugin";
+  import play from "../assets/play.svg";
   import { onMount } from "svelte";
 
   export let kind;
@@ -30,6 +31,7 @@
         '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-chevron-left" viewBox="0 0 16 16">   <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/> </svg>',
       closeSVG:
         '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-x"   viewBox="0 0 16 16">   <path     d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" /> </svg>',
+      counter: false,
       pswpModule: () => import("photoswipe"),
     });
 
@@ -80,12 +82,29 @@
           <div class="desc-content">{project.title}</div>
         </div>
         <span class="pswp-caption-content">{project.desc}</span>
+        <div class="play">
+          <img src={play} alt="Play video" />
+        </div>
       </a>
     {/each}
   </div>
 </div>
 
 <style>
+  a[data-pswp-type="video"] {
+    .play {
+      height: 100%;
+      position: static;
+      transform: translateY(-100%);
+      justify-content: center;
+      display: flex;
+      pointer-events: none;
+      img {
+        filter: drop-shadow(16px 16px 20px);
+        width: 4rem;
+      }
+    }
+  }
   .title {
     position: static;
     height: 0;
