@@ -23,7 +23,7 @@
   onMount(() => {
     let lightbox = new PhotoSwipeLightbox({
       gallery: "#images",
-      children: "a",
+      children: "a.grid-item",
       zoom: false,
       arrowNextSVG:
         '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-chevron-right" viewBox="0 0 16 16">   <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/> </svg>',
@@ -52,10 +52,11 @@
     lightbox.init();
   });
 
-  const height = (style) =>
+  const width = (style) =>
     ({
       wide: 2160,
       programming: 1920,
+      "programming-tall": 596,
     })[style] || 1080;
 </script>
 
@@ -81,21 +82,23 @@
         data-pswp-video-src={project.type == "video"
           ? "projects/" + kind.folder + "/" + i + "_v.mp4"
           : ""}
-        data-pswp-width={height(project.style)}
+        data-pswp-width={width(project.style)}
         data-pswp-height={1080}
         class="grid-item {project['style']}"
-        style="view-transition-name: image-{i};"
         rel="noreferrer"
       >
         <Image
           c="project-img"
           src={`/projects/${kind.folder}/${i}.jpg`}
-          alt={`3d render ${i}`}
+          alt={`${kind.folder} ${i}`}
         />
         <div class="title">
           <div class="desc-content">{project.title}</div>
         </div>
-        <span class="pswp-caption-content"> {@html project.desc}</span>
+        <span class="pswp-caption-content"
+          ><h4>{project.title}</h4>
+          {@html project.desc}</span
+        >
         <div class="play">
           <img src={play} alt="Play video" />
         </div>
@@ -172,8 +175,17 @@
     aspect-ratio: 2.1;
   }
 
+  .grid-item.nothumb {
+    display: none;
+  }
+
   .grid-item.programming {
     aspect-ratio: 16 / 9;
+    grid-column: span 3;
+  }
+
+  .grid-item.programming-tall {
+    aspect-ratio: 453 / 821;
   }
 
   @media (max-width: 768px) {
